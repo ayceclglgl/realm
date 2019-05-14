@@ -1,7 +1,10 @@
 # Realm
 Simple API to support the creation and retrieval of User Realms.  
 # 
-Default profile is set to "mysql", can be change to "h2".
+Default profile is set to "mysql", can be changed to "h2".
+
+For mysql; change properties according to your environment.("spring.datasource.url", "spring.datasource.username" .. etc)
+"/realm/src/main/resources/scripts/mysql.sql" file can be used as an example.
 # 
 TODOs:
 
