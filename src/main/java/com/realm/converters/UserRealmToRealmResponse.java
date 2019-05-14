@@ -14,7 +14,7 @@ public class UserRealmToRealmResponse implements Converter<UserRealm, RealmRespo
 		RealmResponse realmResponse = new RealmResponse();
 		realmResponse.setId(source.getId());
 		realmResponse.setDescription(source.getDescription());
-		realmResponse.setKey(source.getKey());
+		realmResponse.setKey(source.getEncKey());
 		realmResponse.setName(source.getName());
 		return realmResponse;
 	}

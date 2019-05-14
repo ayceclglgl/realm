@@ -5,8 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "realm")
 public class UserRealm {
 	public static final int KEY_LENGTH = 32;
 	
@@ -17,17 +19,17 @@ public class UserRealm {
 	private String name;
 	private String description;
 	@Column(length = KEY_LENGTH)
-	private String key;
+	private String encKey;
 	
 	
 	public UserRealm() {
 	}
 	
-	public UserRealm(Long id, String name, String description, String key) {
+	public UserRealm(Long id, String name, String description, String encKey) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.key = key;
+		this.encKey = encKey;
 	}
 	
 	public Long getId() {
@@ -42,8 +44,8 @@ public class UserRealm {
 		return description;
 	}
 
-	public String getKey() {
-		return key;
+	public String getEncKey() {
+		return encKey;
 	}
 
 
@@ -62,8 +64,8 @@ public class UserRealm {
 	}
 
 
-	public void setKey(String key) {
-		this.key = key;
+	public void setEncKey(String encKey) {
+		this.encKey = encKey;
 	}
 
 	

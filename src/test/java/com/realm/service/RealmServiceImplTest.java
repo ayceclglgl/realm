@@ -72,7 +72,7 @@ public class RealmServiceImplTest {
 		assertEquals(Long.valueOf(1), returnedUserRealm.getId());
 		assertEquals("Name", returnedUserRealm.getName());
 		assertEquals("Description", returnedUserRealm.getDescription());
-		assertEquals("", returnedUserRealm.getKey());
+		assertEquals("", returnedUserRealm.getEncKey());
 		verify(repository).findById(anyLong());
 		
 	}
