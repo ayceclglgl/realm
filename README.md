@@ -25,8 +25,3 @@ TODOs:
 - jackson-dataformat-xml 
 
 are incompatible with spring-boot-starter-parent. Unfortunately their versions are overridden. 
-
-- RealmController
-
-change the content-type implementation and do it in nice way.
-

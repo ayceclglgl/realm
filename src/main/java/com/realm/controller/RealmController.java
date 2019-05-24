@@ -40,12 +40,8 @@ public class RealmController {
 			throw new InvalidRealmName(); // since validation is just on name field
 		}
 
-		// TODO: do it in a nice way!!
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("content-type", contentType);
-
 		UserRealm userRealm = service.createRealm(realm.getName(), realm.getDescription());
-		return new ResponseEntity<>(userRealmToRealmResponse.convert(userRealm), headers, HttpStatus.CREATED);
+		return new ResponseEntity<>(userRealmToRealmResponse.convert(userRealm), HttpStatus.CREATED);
 	}
 
 	
